@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+:root {
+  --neo-lime: #bef264;
+  --neo-lime-dark: #9ad438;
+  --neo-pink: #ff85a1;
+  --neo-pink-dark: #e86381;
+  --neo-purple: #7053ff;
+  --neo-purple-dark: #5838eb;
+  --neo-yellow: #facc15;
+  --neo-cyan: #22d3ee;
+  --neo-bg: #f8fafc;
+  --neo-card-bg: #ffffff;
+  --neo-black: #000000;
+  --neo-border-width: 3.5px;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--neo-bg);
+  color: var(--neo-black);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Blueprint / Graph Paper Canvas */
+.grid-paper-bg {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+}
+
+.grid-paper-purple {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+}
+
+/* Neo-Brutalist Box Shadows (Pure Zero-Blur Geometric Drop) */
+.neo-shadow-sm {
+  box-shadow: 2.5px 2.5px 0px var(--neo-black);
+}
+
+.neo-shadow-md {
+  box-shadow: 4px 4px 0px var(--neo-black);
+}
+
+.neo-shadow-lg {
+  box-shadow: 6px 6px 0px var(--neo-black);
+}
+
+.neo-shadow-xl {
+  box-shadow: 8px 8px 0px var(--neo-black);
+}
+
+.neo-shadow-white {
+  box-shadow: 4px 4px 0px #ffffff;
+}
+
+/* Neo-Brutalist Core Components */
+.neo-border {
+  border: var(--neo-border-width) solid var(--neo-black);
+}
+
+.neo-border-sm {
+  border: 2.5px solid var(--neo-black);
+}
+
+.neo-border-lg {
+  border: 4px solid var(--neo-black);
+}
+
+.neo-card {
+  background-color: var(--neo-card-bg);
+  border: var(--neo-border-width) solid var(--neo-black);
+  box-shadow: 5px 5px 0px var(--neo-black);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.neo-card-interactive:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px var(--neo-black);
+}
+
+/* Neo-Brutalist Tactical Buttons */
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 10px 20px;
+  border: var(--neo-border-width) solid var(--neo-black);
+  box-shadow: 4px 4px 0px var(--neo-black);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--neo-black);
+}
+
+.neo-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px var(--neo-black);
+}
+
+.neo-btn-lime {
+  background-color: var(--neo-lime);
+  color: var(--neo-black);
+}
+.neo-btn-lime:hover {
+  background-color: var(--neo-lime-dark);
+}
+
+.neo-btn-pink {
+  background-color: var(--neo-pink);
+  color: var(--neo-black);
+}
+.neo-btn-pink:hover {
+  background-color: var(--neo-pink-dark);
+}
+
+.neo-btn-purple {
+  background-color: var(--neo-purple);
+  color: #ffffff;
+}
+.neo-btn-purple:hover {
+  background-color: var(--neo-purple-dark);
+}
+
+.neo-btn-white {
+  background-color: #ffffff;
+  color: var(--neo-black);
+}
+.neo-btn-white:hover {
+  background-color: #f1f5f9;
+}
+
+/* Square Icon Buttons */
+.neo-icon-btn {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 3px solid var(--neo-black);
+  box-shadow: 3px 3px 0px var(--neo-black);
+  color: var(--neo-black);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 0.9rem;
+  transition: all 0.12s ease;
+}
+
+.neo-icon-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--neo-black);
+  background-color: var(--neo-lime);
+}
+
+.neo-icon-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--neo-black);
+}
+
+/* Neo-Brutalist Badges / Stickers */
+.neo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 2px solid var(--neo-black);
+  box-shadow: 2px 2px 0px var(--neo-black);
+  letter-spacing: 0.04em;
+}
+
+.neo-badge-lime {
+  background-color: var(--neo-lime);
+  color: var(--neo-black);
+}
+
+.neo-badge-pink {
+  background-color: var(--neo-pink);
+  color: var(--neo-black);
+}
+
+.neo-badge-purple {
+  background-color: var(--neo-purple);
+  color: #ffffff;
+}
+
+.neo-badge-white {
+  background-color: #ffffff;
+  color: var(--neo-black);
+}
+
+/* Spiky Starburst Decal Sticker */
+.starburst-badge {
+  width: 110px;
+  height: 110px;
+  background-color: var(--neo-lime);
+  border: 3.5px solid var(--neo-black);
+  box-shadow: 4px 4px 0px var(--neo-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--neo-black);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  user-select: none;
+}
+
+.starburst-badge:hover {
+  transform: rotate(25deg) scale(1.08);
+  background-color: var(--neo-yellow);
+}
+
+/* Material Symbols Outlined Configuration */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Interactive Modal Overlays */
+.neo-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.neo-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.neo-modal-window {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 4px solid var(--neo-black);
+  box-shadow: 8px 8px 0px var(--neo-black);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  transition: transform 0.2s ease;
+}
+
+.neo-modal-backdrop.active .neo-modal-window {
+  transform: translateY(0);
+}
+
+/* Interactive Toast Notification */
+#neo-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--neo-lime);
+  border: 3.5px solid var(--neo-black);
+  box-shadow: 5px 5px 0px var(--neo-black);
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--neo-black);
+  z-index: 9999;
+  transform: translateY(120%);
+  transition: transform 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+#neo-toast.active {
+  transform: translateY(0);
+}
+
+/* Monospace Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-left: 2px solid #000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neo-black);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neo-purple);
+}
+
+/* Print Overrides */
+@media print {
+  .sticky, #neo-toast, .neo-modal-backdrop, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  .neo-card {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}

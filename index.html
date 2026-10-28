@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devansh Goyal | Cybersecurity Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <!-- Typography: Space Grotesk & JetBrains Mono (Strictly matching reference image) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Engine with Neobrutalism Tokens -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "neo-lime": "#c8f560",
+            "neo-lime-dark": "#a8e038",
+            "neo-pink": "#ff85a1",
+            "neo-pink-dark": "#e06381",
+            "neo-purple": "#7053ff",
+            "neo-purple-dark": "#5838eb",
+            "neo-gray": "#f1f5f9",
+            "neo-card-gray": "#e2e8f0",
+            "neo-bg": "#ffffff",
+            "neo-black": "#000000"
+          },
+          fontFamily: {
+            display: ["'Space Grotesk'", "sans-serif"],
+            body: ["'Space Grotesk'", "sans-serif"],
+            mono: ["'JetBrains Mono'", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="./src/styles/neobrutalism.css">
+</head>
+<body class="bg-white text-black font-body selection:bg-neo-lime selection:text-black min-h-screen">
+
+  <div class="max-w-[1340px] mx-auto border-x-[3.5px] border-black bg-white min-h-screen flex flex-col justify-between">
+
+    <!-- ==================== 1. TOP NAVBAR ==================== -->
+    <header class="border-b-[3.5px] border-black bg-white sticky top-0 z-50">
+      <div class="flex justify-between items-center px-4 sm:px-8 py-3.5">
+        
+        <!-- Brand Pill (Left) -->
+        <a class="bg-neo-lime text-black border-[2.5px] border-black px-4 py-1.5 font-mono text-xs sm:text-sm font-black shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all flex items-center gap-1.5" href="#">
+          <span>&lt;/&gt;</span>
+          <span>DEVANSH DEV</span>
+        </a>
+
+        <!-- Center Nav Links -->
+        <nav class="hidden md:flex items-center gap-7 font-mono text-xs font-black uppercase tracking-wider">
+          <a class="hover:text-neo-purple hover:underline underline-offset-4 transition-colors" href="#skills">SKILLS</a>
+          <a class="hover:text-neo-purple hover:underline underline-offset-4 transition-colors" href="#projects">PROJECTS</a>
+          <a class="hover:text-neo-purple hover:underline underline-offset-4 transition-colors" href="#certifications">CERTIFICATIONS</a>
+          <a class="hover:text-neo-purple hover:underline underline-offset-4 transition-colors" href="#experience">EXPERIENCE</a>
+          <a class="hover:text-neo-purple hover:underline underline-offset-4 transition-colors" href="#education">EDUCATION</a>
+        </nav>
+
+        <!-- Right Action Controls -->
+        <div class="flex items-center gap-2.5">
+          <!-- Contact Me Pill (Purple) -->
+          <button id="btn-nav-contact" class="bg-neo-purple text-white border-[2.5px] border-black px-4 py-1.5 font-mono text-xs font-black shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">
+            CONTACT ME -&gt;
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION (TWO-COLUMN SPLIT) ==================== -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 border-b-[3.5px] border-black">
+      
+      <!-- Left Column: Graph Paper Canvas & Typography Intro -->
+      <div class="lg:col-span-7 p-6 sm:p-10 lg:p-12 border-b-[3.5px] lg:border-b-0 lg:border-r-[3.5px] border-black grid-paper-bg flex flex-col justify-between gap-6">
+        <div>
+          <!-- Tag Pill (Purple) -->
+          <div class="inline-block bg-neo-purple text-white border-[2px] border-black px-3 py-1 font-mono text-xs font-black tracking-wide shadow-[2px_2px_0px_#000] mb-5">
+            HEY, I'M DEVANSH
+          </div>
+
+          <!-- Giant Bold Title -->
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[62px] font-black uppercase text-black leading-[1.04] tracking-tight mb-5">
+            CYBERSECURITY<br>ENGINEER
+          </h1>
+
+          <!-- Summary / Bio Description -->
+          <p class="font-mono text-xs sm:text-sm text-slate-800 leading-relaxed font-semibold max-w-lg mb-8">
+            Analytical Cybersecurity Engineer &amp; Threat Detection Specialist specializing in Digital Forensics, Incident Response (DFIR), OSINT, and Endpoint Threat Detection. Creator of Dikoryx and EmailSF.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 mb-8">
+            <a href="#projects" class="bg-neo-lime text-black border-[2.5px] border-black px-6 py-3 font-display font-black text-xs sm:text-sm uppercase shadow-[4px_4px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
+              VIEW MY WORK ↗
+            </a>
+            <a id="btn-download-resume" href="./Devansh_Goyal_Resume.pdf" download="Devansh_Goyal_Resume.pdf" class="bg-white text-black border-[2.5px] border-black px-6 py-3 font-display font-black text-xs sm:text-sm uppercase shadow-[4px_4px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all inline-flex items-center gap-1.5">
+              DOWNLOAD RESUME ↓
+            </a>
+          </div>
+        </div>
+
+        <!-- Connect With Me Row -->
+        <div class="pt-4 border-t-2 border-black/20">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+            <div class="font-mono text-xs font-black uppercase text-slate-700 tracking-wider">
+              CONNECT WITH ME
+            </div>
+            <a href="mailto:devanshgoyal1402@gmail.com" class="font-mono text-xs font-black text-black hover:text-neo-purple bg-neo-lime border-[1.5px] border-black px-2 py-0.5 shadow-[2px_2px_0px_#000] inline-flex items-center gap-1 transition-all" title="Direct Email">
+              <span class="material-symbols-outlined text-sm">mail</span>
+              devanshgoyal1402@gmail.com
+            </a>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <a href="https://github.com/Devansh7006" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white border-[2.5px] border-black flex items-center justify-center shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-neo-lime transition-all" title="GitHub">
+              <span class="material-symbols-outlined text-xl">code</span>
+            </a>
+            <a href="https://linkedin.com/in/goyaldevansh" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white border-[2.5px] border-black flex items-center justify-center shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-neo-lime transition-all" title="LinkedIn">
+              <span class="material-symbols-outlined text-xl">link</span>
+            </a>
+            <a href="https://tryhackme.com/p/BIG.D" target="_blank" rel="noopener noreferrer" class="px-2.5 h-10 bg-white border-[2.5px] border-black flex items-center justify-center shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-neo-lime transition-all font-mono font-black text-xs" title="TryHackMe Profile (BIG.D)">
+              THM
+            </a>
+            <a href="mailto:devanshgoyal1402@gmail.com" class="w-10 h-10 bg-white border-[2.5px] border-black flex items-center justify-center shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-neo-lime transition-all" title="Email: devanshgoyal1402@gmail.com">
+              <span class="material-symbols-outlined text-xl">mail</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Bubblegum Pink Container & Layered Photo Frame -->
+      <div class="lg:col-span-5 bg-neo-pink p-6 sm:p-10 flex items-center justify-center relative overflow-hidden min-h-[460px]">
+        
+        <!-- Layered Photo Structure (Matching Reference Screenshot) -->
+        <div class="relative w-64 sm:w-72">
+          <!-- Offset Lime Green Box Behind -->
+          <div class="absolute -top-3 -right-3 w-full h-full bg-neo-lime border-[3px] border-black"></div>
+
+          <!-- Main Photo Frame -->
+          <div class="relative bg-black border-[3.5px] border-black shadow-[4px_4px_0px_#000] overflow-hidden aspect-[4/5]">
+            <img 
+              src="./devansh_photo.jpg" 
+              alt="Devansh Goyal - Cybersecurity Engineer" 
+              class="w-full h-full object-cover object-top contrast-[1.06]"
+            />
+          </div>
+
+          <!-- Floating Purple Telemetry Box (Overlapping Bottom-Right) -->
+          <div class="absolute -bottom-6 -right-6 sm:-right-8 bg-neo-purple text-white border-[3px] border-black p-3.5 shadow-[4px_4px_0px_#000] font-mono text-[11px] leading-relaxed max-w-[245px] z-10">
+            <div class="text-neo-lime font-bold">&gt; whoami</div>
+            <div class="space-y-0.5 mt-1 font-semibold">
+              <div>ROLE: <span class="text-neo-lime">Security Engineer</span></div>
+              <div>FOCUS: <span class="text-white">DFIR &amp; Threat Hunter</span></div>
+              <div>STACK: <span class="text-white">Python • Rust • Java • SQL</span></div>
+              <div>GLOBAL: <span class="text-neo-lime">TryHackMe Top 4%</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. VERIFIED TECH STACK SECTION ==================== -->
+    <section id="skills" class="border-b-[3.5px] border-black grid grid-cols-1 lg:grid-cols-12 bg-white">
+      <!-- Left Anchor Pill Block -->
+      <div class="lg:col-span-3 bg-neo-purple text-white p-6 sm:p-8 border-b-[3.5px] lg:border-b-0 lg:border-r-[3.5px] border-black flex flex-col justify-between">
+        <div>
+          <div class="inline-block bg-neo-lime text-black border-[2px] border-black px-2.5 py-0.5 font-mono text-[10px] font-black uppercase shadow-[2px_2px_0px_#000] mb-3">
+            TECHNICAL PROFICIENCY
+          </div>
+          <h3 class="font-display font-black text-2xl sm:text-3xl uppercase text-white leading-tight">
+            CORE TECH<br>STACK →
+          </h3>
+        </div>
+        <div class="font-mono text-xs font-bold text-slate-200 mt-4 lg:mt-0">
+          PRODUCTION-TESTED TOOLING
+        </div>
+      </div>
+
+      <!-- Right Stack Columns (Languages, Security, Technologies) -->
+      <div class="lg:col-span-9 p-6 sm:p-8 flex flex-col gap-5 justify-center">
+        
+        <!-- Category 1: Languages -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+          <div class="w-36 shrink-0 font-mono text-xs font-black uppercase text-slate-700 flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 bg-neo-lime border border-black inline-block"></span>
+            LANGUAGES:
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Python</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Java</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Rust</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">SQL</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Security Tools & Domains -->
+        <div class="flex flex-col sm:flex-row sm:items-start gap-3 pt-3.5 border-t border-black/15">
+          <div class="w-36 shrink-0 font-mono text-xs font-black uppercase text-slate-700 flex items-center gap-1.5 pt-1">
+            <span class="w-2.5 h-2.5 bg-neo-pink border border-black inline-block"></span>
+            SECURITY:
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Burp Suite</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Ghidra</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Wireshark</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Nmap</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">OWASP Top 10</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">MITRE ATT&amp;CK</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">OSINT</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">EMAIL Security</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Digital Forensics</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Technologies & Platforms -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3 pt-3.5 border-t border-black/15">
+          <div class="w-36 shrink-0 font-mono text-xs font-black uppercase text-slate-700 flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 bg-neo-purple border border-black inline-block"></span>
+            TECHNOLOGIES:
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Git</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Docker</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">GitHub Actions</span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">Vercel</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. MIDDLE SECTION (FEATURED PROJECTS & CERTS) ==================== -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 border-b-[3.5px] border-black">
+      
+      <!-- Left Column: Featured Projects -->
+      <div class="lg:col-span-8 p-6 sm:p-8 lg:p-10 border-b-[3.5px] lg:border-b-0 lg:border-r-[3.5px] border-black flex flex-col justify-between" id="projects">
+        
+        <div>
+          <!-- Header Bar -->
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-black tracking-tight">
+              FEATURED PROJECTS
+            </h2>
+
+            <div class="flex items-center gap-3">
+              <button id="btn-view-all-projects" class="hidden sm:inline-flex bg-white text-black border-[2.5px] border-black px-3.5 py-1 font-mono text-xs font-black shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">
+                VIEW ALL PROJECTS -&gt;
+              </button>
+              <div class="flex items-center gap-1.5">
+                <button id="btn-proj-prev" class="w-8 h-8 bg-neo-pink text-black border-[2px] border-black font-mono font-black text-xs flex items-center justify-center shadow-[2px_2px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all" title="Previous Project">&lt;</button>
+                <button id="btn-proj-next" class="w-8 h-8 bg-neo-pink text-black border-[2px] border-black font-mono font-black text-xs flex items-center justify-center shadow-[2px_2px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all" title="Next Project">&gt;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card Container (Border-3.5 black, hard shadow) -->
+          <div class="border-[3.5px] border-black p-5 sm:p-7 bg-white shadow-[6px_6px_0px_#000]">
+            
+            <!-- Project Card Top Meta Bar: Category, Metrics, and Direct Links -->
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b-2 border-black/15">
+              <div class="flex flex-wrap items-center gap-2">
+                <span id="proj-category" class="bg-neo-purple text-white border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-black uppercase shadow-[2px_2px_0px_#000]">
+                  ENDPOINT DETECTION &amp; RESPONSE
+                </span>
+                <span id="proj-metric" class="bg-neo-lime text-black border-[1.5px] border-black px-2 py-0.5 font-mono text-xs font-black uppercase shadow-[2px_2px_0px_#000]">
+                  LATENCY: &lt;1.8ms
+                </span>
+                <span id="proj-status" class="bg-slate-100 text-black border-[1.5px] border-black px-2 py-0.5 font-mono text-xs font-bold uppercase">
+                  STATUS: DEPLOYED
+                </span>
+              </div>
+              <div class="flex items-center gap-2" id="proj-direct-links">
+                <a id="proj-live-link" href="https://dikoryx.vercel.app" target="_blank" rel="noopener noreferrer" class="bg-neo-lime text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-white transition-all inline-flex items-center gap-1">
+                  LIVE DEMO ↗
+                </a>
+                <a id="proj-github-link" href="https://github.com/Devansh7006/Dikoryx" target="_blank" rel="noopener noreferrer" class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-neo-lime transition-all inline-flex items-center gap-1">
+                  GITHUB ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <div class="mb-4">
+              <h3 id="proj-title" class="font-display text-2xl sm:text-3xl font-black uppercase text-black mb-1">
+                DIKORYX EDR PLATFORM
+              </h3>
+              <p id="proj-tagline" class="font-mono text-xs font-bold text-neo-purple uppercase mb-2.5">
+                Autonomous Windows Endpoint Detection &amp; Incident Response Suite
+              </p>
+              <p id="proj-desc" class="font-mono text-xs sm:text-sm text-slate-800 leading-relaxed font-semibold">
+                AI-Powered Endpoint Detection &amp; Response platform capturing real-time process execution lineages, FIM monitoring, USB drive insertions, and automatic MITRE ATT&amp;CK risk scoring.
+              </p>
+            </div>
+
+            <!-- Technical Architecture Highlights (Resume-Accredited) -->
+            <div class="bg-slate-50 border-2 border-black p-4 mb-5 shadow-[3px_3px_0px_#000]">
+              <div class="font-mono text-[11px] font-black uppercase text-slate-700 tracking-wider mb-2">
+                KEY ENGINEERING ARCHITECTURE:
+              </div>
+              <ul id="proj-bullets" class="space-y-1.5 font-mono text-xs text-slate-900 font-semibold">
+                <!-- Bullets dynamically injected via TS -->
+              </ul>
+            </div>
+
+            <!-- Tech Tags -->
+            <div id="proj-tech-tags" class="flex flex-wrap gap-2 mb-6">
+              <!-- Tags dynamically injected via TS -->
+            </div>
+
+            <!-- Action Button & Pagination Dots -->
+            <div class="flex items-center justify-between pt-3 border-t-2 border-black/15">
+              <button id="btn-proj-details" class="bg-white text-black border-[2.5px] border-black px-5 py-2 font-display font-black text-xs uppercase shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
+                VIEW DEEP DIVE MODAL -&gt;
+              </button>
+
+              <div class="flex items-center gap-3">
+                <span id="proj-counter" class="font-mono text-xs font-black text-slate-700">01 / 02</span>
+                <div id="proj-dots" class="flex items-center gap-2">
+                  <span class="w-3 h-3 bg-black rounded-full inline-block cursor-pointer" data-idx="0"></span>
+                  <span class="w-3 h-3 bg-white border-2 border-black rounded-full inline-block cursor-pointer" data-idx="1"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Certifications & Education (Lime Green Background) -->
+      <div class="lg:col-span-4 bg-neo-lime p-6 sm:p-8 flex flex-col justify-between gap-6" id="certifications">
+        <div>
+          <!-- Header -->
+          <div class="flex items-center justify-between mb-5">
+            <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-black tracking-tight">
+              VERIFIED CERTIFICATIONS
+            </h2>
+            <span class="border-[1.5px] border-black px-2 py-0.5 font-mono text-[10px] font-black bg-white uppercase">
+              RESUME ACCREDITED
+            </span>
+          </div>
+
+          <!-- Vertical Stack of Verified Cards with Direct Web Links -->
+          <div class="flex flex-col gap-3.5">
+            
+            <!-- Cert 1: OPSWAT ICIP -->
+            <a href="./certificates/opswat_icip.png" target="_blank" rel="noopener noreferrer" class="bg-neo-card-gray border-[3px] border-black p-4 shadow-[4px_4px_0px_#000] flex flex-col justify-center min-h-[86px] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000] hover:bg-white transition-all group block" title="View OPSWAT ICIP Certificate">
+              <div class="flex items-start justify-between gap-2">
+                <div class="font-display font-black text-lg sm:text-xl uppercase text-black leading-tight group-hover:text-neo-purple transition-colors">
+                  OPSWAT ICIP
+                </div>
+                <span class="border-[1.5px] border-black px-1.5 py-0.5 font-mono text-[10px] font-black bg-white uppercase shrink-0">
+                  VIEW PNG ↗
+                </span>
+              </div>
+              <div class="font-mono text-xs text-slate-800 font-bold mt-0.5">
+                Critical Infrastructure Protection • OPSWAT Academy
+              </div>
+            </a>
+
+            <!-- Cert 2: Palo Alto Networks -->
+            <a href="./certificates/palo_alto_fundamentals.pdf" target="_blank" rel="noopener noreferrer" class="bg-neo-card-gray border-[3px] border-black p-4 shadow-[4px_4px_0px_#000] flex flex-col justify-center min-h-[86px] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000] hover:bg-white transition-all group block" title="View Palo Alto Networks Certificate">
+              <div class="flex items-start justify-between gap-2">
+                <div class="font-display font-black text-lg sm:text-xl uppercase text-black leading-tight group-hover:text-neo-purple transition-colors">
+                  Palo Alto Networks
+                </div>
+                <span class="border-[1.5px] border-black px-1.5 py-0.5 font-mono text-[10px] font-black bg-white uppercase shrink-0">
+                  VIEW PDF ↗
+                </span>
+              </div>
+              <div class="font-mono text-xs text-slate-800 font-bold mt-0.5">
+                Security Operations Fundamentals • Palo Alto
+              </div>
+            </a>
+
+            <!-- Cert 3: CompTIA PenTest+ -->
+            <a href="./certificates/thm_comptia_pentest.pdf" target="_blank" rel="noopener noreferrer" class="bg-neo-card-gray border-[3px] border-black p-4 shadow-[4px_4px_0px_#000] flex flex-col justify-center min-h-[86px] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000] hover:bg-white transition-all group block" title="View CompTIA PenTest+ Certificate">
+              <div class="flex items-start justify-between gap-2">
+                <div class="font-display font-black text-lg sm:text-xl uppercase text-black leading-tight group-hover:text-neo-purple transition-colors">
+                  CompTIA PenTest+
+                </div>
+                <span class="border-[1.5px] border-black px-1.5 py-0.5 font-mono text-[10px] font-black bg-white uppercase shrink-0">
+                  VIEW PDF ↗
+                </span>
+              </div>
+              <div class="font-mono text-xs text-slate-800 font-bold mt-0.5">
+                Penetration Testing Path • TryHackMe Top 4%
+              </div>
+            </a>
+
+            <!-- Cert 4: Cisco Introduction to Cybersecurity -->
+            <a href="./certificates/cisco_intro_cybersecurity.pdf" target="_blank" rel="noopener noreferrer" class="bg-neo-card-gray border-[3px] border-black p-4 shadow-[4px_4px_0px_#000] flex flex-col justify-center min-h-[86px] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#000] hover:bg-white transition-all group block" title="View Cisco Introduction to Cybersecurity Certificate">
+              <div class="flex items-start justify-between gap-2">
+                <div class="font-display font-black text-lg sm:text-xl uppercase text-black leading-tight group-hover:text-neo-purple transition-colors">
+                  Cisco Academy
+                </div>
+                <span class="border-[1.5px] border-black px-1.5 py-0.5 font-mono text-[10px] font-black bg-white uppercase shrink-0">
+                  VIEW PDF ↗
+                </span>
+              </div>
+              <div class="font-mono text-xs text-slate-800 font-bold mt-0.5">
+                Introduction to Cybersecurity • Cisco Networking Academy
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- View All Certifications Button (White) -->
+        <button id="btn-view-all-certs" class="w-full bg-white text-black border-[2.5px] border-black py-3 font-display font-black text-xs sm:text-sm uppercase shadow-[4px_4px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all text-center">
+          VIEW ALL VERIFIED CERTIFICATIONS -&gt;
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== 5. WORK EXPERIENCE SECTION ==================== -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 border-b-[3.5px] border-black" id="experience">
+      
+      <!-- Left Pill Block (Pink) -->
+      <div class="lg:col-span-4 bg-neo-pink p-6 sm:p-8 lg:p-10 border-b-[3.5px] lg:border-b-0 lg:border-r-[3.5px] border-black flex flex-col justify-between">
+        <div>
+          <div class="inline-block bg-white text-black border-[2px] border-black px-2.5 py-0.5 font-mono text-[10px] font-black uppercase shadow-[2px_2px_0px_#000] mb-3">
+            FIELD CASEWORK
+          </div>
+          <h3 class="font-display font-black text-3xl sm:text-4xl uppercase text-black leading-tight mb-4">
+            WORK<br>EXPERIENCE →
+          </h3>
+          <p class="font-mono text-xs text-black font-semibold leading-relaxed mb-6">
+            Law enforcement cyber forensics, live acquisition, and national portal threat attribution.
+          </p>
+        </div>
+        
+        <div class="flex flex-col gap-3">
+          <div class="font-mono text-xs font-black text-black">
+            NIST SP 800-86 • ISO/IEC 27037
+          </div>
+          <a id="btn-view-full-resume" href="./Devansh_Goyal_Resume.pdf" download="Devansh_Goyal_Resume.pdf" class="bg-white text-black border-[2.5px] border-black px-5 py-2.5 font-display font-black text-xs uppercase shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all inline-flex items-center justify-center gap-1.5 w-fit">
+            DOWNLOAD FULL RESUME [PDF] ↓
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Summer Internship Only -->
+      <div class="lg:col-span-8 p-6 sm:p-8 lg:p-10 bg-white flex flex-col justify-between gap-6">
+        <div>
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+            <h4 class="font-display font-black text-xl sm:text-2xl uppercase text-black">
+              CYBER SECURITY &amp; DIGITAL FORENSICS INTERN
+            </h4>
+            <span class="font-mono text-xs font-bold text-black bg-neo-lime border-[2px] border-black px-2.5 py-0.5 shadow-[2px_2px_0px_#000]">MAY 2026 – JULY 2026</span>
+          </div>
+          <div class="font-mono text-xs sm:text-sm text-neo-purple font-black uppercase mb-4">
+            CYBER CRIME CELL • POLICE COMMISSIONERATE AGRA, INDIA
+          </div>
+          <ul class="space-y-3 list-disc pl-5 font-mono text-xs sm:text-sm text-slate-800 leading-relaxed font-semibold">
+            <li><strong>Digital Forensics &amp; Evidence Handling:</strong> Supported live forensics, disk acquisitions, and timeline reconstruction for 100+ cybercrime cases adhering to NIST SP 800-86 and ISO/IEC 27037 chain-of-custody protocols with SHA-256 cryptographic verification.</li>
+            <li><strong>Incident Triage &amp; Threat Attribution:</strong> Triaged high-priority cyber complaints via the National Cyber Crime Reporting Portal (NCRP), correlating IOCs (malicious IP blocks, phishing domains, mule accounts) to accelerate adversary attribution and case escalation.</li>
+            <li><strong>OSINT &amp; Threat Reporting:</strong> Executed multi-source OSINT operations across DNS telemetry and registrar records, cutting investigation turnaround by 40%; authored formal forensic summaries and delivered awareness workshops to 500+ citizens and law enforcement officers.</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-black/15">
+          <span class="font-mono text-xs font-black text-slate-700 uppercase mr-2">VERIFIED TOOLS:</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">FTK Imager</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">Autopsy</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">Volatility 3</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">NCRP Portal</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">DNS OSINT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. FORMAL EDUCATION SECTION ==================== -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 border-b-[3.5px] border-black" id="education">
+      
+      <!-- Left Pill Block (Lime) -->
+      <div class="lg:col-span-4 bg-neo-lime p-6 sm:p-8 lg:p-10 border-b-[3.5px] lg:border-b-0 lg:border-r-[3.5px] border-black flex flex-col justify-between">
+        <div>
+          <div class="inline-block bg-white text-black border-[2px] border-black px-2.5 py-0.5 font-mono text-[10px] font-black uppercase shadow-[2px_2px_0px_#000] mb-3">
+            ACADEMIC DEGREE
+          </div>
+          <h3 class="font-display font-black text-3xl sm:text-4xl uppercase text-black leading-tight mb-4">
+            FORMAL<br>EDUCATION →
+          </h3>
+          <p class="font-mono text-xs text-black font-semibold leading-relaxed mb-6">
+            Undergraduate foundation in Computer Science with dedicated engineering specializations in Cybersecurity &amp; Artificial Intelligence.
+          </p>
+        </div>
+        
+        <div class="font-mono text-xs font-black text-black">
+          DEGREE ACCREDITED • 2024 – 2028
+        </div>
+      </div>
+
+      <!-- Right Column: GLA University Degree & Curriculum Details -->
+      <div class="lg:col-span-8 p-6 sm:p-8 lg:p-10 bg-white flex flex-col justify-between gap-6">
+        <div>
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+            <h4 class="font-display font-black text-xl sm:text-2xl uppercase text-black">
+              GLA UNIVERSITY, MATHURA, INDIA
+            </h4>
+            <span class="font-mono text-xs font-bold text-white bg-neo-purple border-[2px] border-black px-2.5 py-0.5 shadow-[2px_2px_0px_#000]">2024 – 2028</span>
+          </div>
+
+          <div class="font-mono text-xs sm:text-sm text-black font-black uppercase mb-3">
+            BACHELOR OF TECHNOLOGY (B.TECH) IN COMPUTER SCIENCE AND ENGINEERING
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="bg-neo-lime text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">
+              SPECIALIZATION: CYBERSECURITY &amp; AI
+            </span>
+            <span class="bg-white text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]">
+              CGPA: 7.6 / 10.0
+            </span>
+            <span class="bg-slate-100 text-black border-[2px] border-black px-3 py-1 font-mono text-xs font-bold">
+              STATUS: UNDERGRADUATE (3RD YEAR)
+            </span>
+          </div>
+
+          <p class="font-mono text-xs sm:text-sm text-slate-800 leading-relaxed font-semibold mb-4">
+            Rigorous engineering curriculum combining algorithmic foundations, low-level systems programming, operating system security, and applied machine learning models for threat intelligence.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-black/15">
+          <span class="font-mono text-xs font-black text-slate-700 uppercase mr-2">CORE ACADEMIC DOMAINS:</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">Data Structures &amp; Algorithms</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">Network Security</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">Operating Systems</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">Cryptography</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">Database Systems</span>
+          <span class="border-[1.5px] border-black px-2.5 py-0.5 font-mono text-xs font-bold bg-slate-100">AI in Cybersecurity</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CONTACT SECTION ==================== -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 border-b-[3.5px] border-black bg-neo-purple text-white relative overflow-hidden grid-paper-purple" id="contact">
+      
+      <!-- Left Column: Title & Bio -->
+      <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 border-b-[3.5px] lg:border-b-0 lg:border-r-[3.5px] border-black flex flex-col justify-between gap-6 relative z-10">
+        <div>
+          <div class="inline-block bg-neo-lime text-black border-[2px] border-black px-2.5 py-0.5 font-mono text-[11px] font-black uppercase shadow-[2px_2px_0px_#000] mb-3">
+            CONTACT ME
+          </div>
+          <h3 class="font-display text-3xl sm:text-4xl font-black uppercase text-white leading-tight mb-3">
+            LET'S CONNECT DIRECTLY.
+          </h3>
+          <p class="font-mono text-xs sm:text-sm text-slate-200 leading-relaxed font-semibold max-w-md">
+            Available for Threat Hunting, Digital Forensics, and Incident Response (DFIR). Reach out directly:
+          </p>
+        </div>
+
+        <div class="font-mono text-xs text-slate-300 font-bold">
+          PRIMARY CHANNELS: EMAIL &amp; LINKEDIN
+        </div>
+      </div>
+
+      <!-- Right Column: Direct Links Grid -->
+      <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 bg-black/20 flex flex-col justify-center gap-4 relative z-10">
+        
+        <!-- Direct Email Card -->
+        <a href="mailto:devanshgoyal1402@gmail.com" class="bg-white text-black border-[2.5px] border-black p-4 shadow-[4px_4px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-neo-lime transition-all flex items-center justify-between group">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-2xl text-neo-purple shrink-0">mail</span>
+            <div>
+              <div class="font-mono text-[10px] font-black uppercase text-slate-500">OFFICIAL EMAIL</div>
+              <div class="font-mono text-xs sm:text-sm font-black truncate">devanshgoyal1402@gmail.com</div>
+            </div>
+          </div>
+          <span class="border-[1.5px] border-black px-3 py-1 font-mono text-xs font-black bg-neo-lime group-hover:bg-white uppercase shrink-0">SEND MAIL ↗</span>
+        </a>
+
+        <!-- Platform Links Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a href="https://linkedin.com/in/goyaldevansh" target="_blank" rel="noopener noreferrer" class="bg-white text-black border-[2px] border-black py-3 px-3 font-display font-black text-xs uppercase shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-neo-lime transition-all text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-base">link</span>
+            LINKEDIN ↗
+          </a>
+          <a href="https://github.com/Devansh7006" target="_blank" rel="noopener noreferrer" class="bg-white text-black border-[2px] border-black py-3 px-3 font-display font-black text-xs uppercase shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-neo-lime transition-all text-center flex items-center justify-center gap-1.5">
+            <span class="material-symbols-outlined text-base">code</span>
+            GITHUB ↗
+          </a>
+          <a href="https://tryhackme.com/p/BIG.D" target="_blank" rel="noopener noreferrer" class="bg-neo-lime text-black border-[2px] border-black py-3 px-3 font-display font-black text-xs uppercase shadow-[3px_3px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-white transition-all text-center flex items-center justify-center">
+            TRYHACKME [BIG.D] ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. FOOTER ==================== -->
+    <footer class="bg-white">
+      <div class="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 py-5 gap-4">
+        
+        <!-- Left Brand Pill -->
+        <div class="flex items-center gap-3">
+          <a class="bg-neo-lime text-black border-[2px] border-black px-3.5 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000]" href="#">
+            &lt;/&gt; DEVANSH DEV
+          </a>
+        </div>
+
+        <!-- Center Copyright -->
+        <div class="font-mono text-xs font-bold text-slate-800 text-center">
+          © 2026 Devansh Goyal. All rights reserved.
+        </div>
+
+        <!-- Right Direct Action Buttons -->
+        <div class="flex items-center gap-2">
+          <a href="https://github.com/Devansh7006" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-white border-[2px] border-black flex items-center justify-center shadow-[2px_2px_0px_#000] hover:bg-neo-lime transition-colors" title="GitHub">
+            <span class="material-symbols-outlined text-base">code</span>
+          </a>
+          <a href="https://linkedin.com/in/goyaldevansh" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-white border-[2px] border-black flex items-center justify-center shadow-[2px_2px_0px_#000] hover:bg-neo-lime transition-colors" title="LinkedIn">
+            <span class="material-symbols-outlined text-base">link</span>
+          </a>
+          <a href="https://tryhackme.com/p/BIG.D" target="_blank" rel="noopener noreferrer" class="px-1.5 h-8 bg-white border-[2px] border-black flex items-center justify-center shadow-[2px_2px_0px_#000] hover:bg-neo-lime transition-colors font-mono font-bold text-xs" title="TryHackMe Profile (BIG.D)">
+            THM
+          </a>
+          <a href="mailto:devanshgoyal1402@gmail.com" class="w-8 h-8 bg-white border-[2px] border-black flex items-center justify-center shadow-[2px_2px_0px_#000] hover:bg-neo-lime transition-colors" title="Email: devanshgoyal1402@gmail.com">
+            <span class="material-symbols-outlined text-base">mail</span>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== MODALS & TOAST NOTIFICATIONS ==================== -->
+
+  <!-- 1. Interactive Project Deep Dive Modal -->
+  <div id="modal-project" class="neo-modal-backdrop">
+    <div class="neo-modal-window">
+      <div class="bg-neo-lime border-b-4 border-black p-4 flex justify-between items-center">
+        <h3 id="modal-proj-title" class="font-display text-xl sm:text-2xl font-black uppercase text-black">
+          PROJECT ARCHITECTURE
+        </h3>
+        <button id="btn-close-proj-modal" class="neo-btn neo-btn-white text-xs px-2.5 py-1 font-mono">
+          [✕ ESC]
+        </button>
+      </div>
+      <div id="modal-proj-body" class="p-6 flex flex-col gap-4 font-body text-sm sm:text-base">
+        <!-- Injected via TypeScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Interactive Certifications Catalog Modal -->
+  <div id="modal-certs" class="neo-modal-backdrop">
+    <div class="neo-modal-window">
+      <div class="bg-neo-pink border-b-4 border-black p-4 flex justify-between items-center">
+        <h3 class="font-display text-xl sm:text-2xl font-black uppercase text-black">
+          VERIFIED MERIT &amp; ACCREDITATIONS
+        </h3>
+        <button id="btn-close-certs-modal" class="neo-btn neo-btn-white text-xs px-2.5 py-1 font-mono">
+          [✕ ESC]
+        </button>
+      </div>
+      <div id="modal-certs-body" class="p-6 flex flex-col gap-4 font-body text-sm">
+        <!-- Injected via TypeScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Direct Contact Channels Hub Modal -->
+  <div id="modal-contact" class="neo-modal-backdrop">
+    <div class="neo-modal-window">
+      <div class="bg-neo-purple text-white border-b-4 border-black p-4 flex justify-between items-center">
+        <h3 class="font-display text-xl sm:text-2xl font-black uppercase text-white">
+          DIRECT CONTACT CHANNELS
+        </h3>
+        <button id="btn-close-contact-modal" class="neo-btn neo-btn-white text-xs px-2.5 py-1 font-mono">
+          [✕ ESC]
+        </button>
+      </div>
+
+      <div class="p-6 flex flex-col gap-3 font-mono text-xs">
+        <p class="font-mono text-xs text-slate-800 leading-relaxed font-semibold mb-1">
+          Reach Devansh Goyal directly via email or verified developer &amp; cybersecurity profiles:
+        </p>
+
+        <!-- Direct Contact Cards Stack -->
+        <div class="flex flex-col gap-2.5">
+          <!-- 1. Email -->
+          <div class="bg-slate-50 border-2 border-black p-3.5 shadow-[3px_3px_0px_#000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
+            <div>
+              <div class="font-mono text-[10px] font-black uppercase text-neo-purple">OFFICIAL EMAIL</div>
+              <div class="font-mono text-xs sm:text-sm font-black text-black">devanshgoyal1402@gmail.com</div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button id="btn-modal-copy-email" class="bg-white text-black border-[1.5px] border-black px-2.5 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-neo-lime transition-all">
+                COPY
+              </button>
+              <a href="mailto:devanshgoyal1402@gmail.com" class="bg-neo-lime text-black border-[1.5px] border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-white transition-all">
+                SEND MAIL ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. LinkedIn -->
+          <div class="bg-slate-50 border-2 border-black p-3.5 shadow-[3px_3px_0px_#000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
+            <div>
+              <div class="font-mono text-[10px] font-black uppercase text-neo-purple">LINKEDIN PROFILE</div>
+              <div class="font-mono text-xs sm:text-sm font-black text-black">linkedin.com/in/goyaldevansh</div>
+            </div>
+            <a href="https://linkedin.com/in/goyaldevansh" target="_blank" rel="noopener noreferrer" class="bg-neo-lime text-black border-[1.5px] border-black px-3.5 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-white transition-all">
+              OPEN LINKEDIN ↗
+            </a>
+          </div>
+
+          <!-- 3. GitHub -->
+          <div class="bg-slate-50 border-2 border-black p-3.5 shadow-[3px_3px_0px_#000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
+            <div>
+              <div class="font-mono text-[10px] font-black uppercase text-neo-purple">GITHUB PROFILE</div>
+              <div class="font-mono text-xs sm:text-sm font-black text-black">github.com/Devansh7006</div>
+            </div>
+            <a href="https://github.com/Devansh7006" target="_blank" rel="noopener noreferrer" class="bg-neo-lime text-black border-[1.5px] border-black px-3.5 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-white transition-all">
+              OPEN GITHUB ↗
+            </a>
+          </div>
+
+          <!-- 4. TryHackMe -->
+          <div class="bg-slate-50 border-2 border-black p-3.5 shadow-[3px_3px_0px_#000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
+            <div>
+              <div class="font-mono text-[10px] font-black uppercase text-neo-purple">TRYHACKME PROFILE</div>
+              <div class="font-mono text-xs sm:text-sm font-black text-black">tryhackme.com/p/BIG.D</div>
+            </div>
+            <a href="https://tryhackme.com/p/BIG.D" target="_blank" rel="noopener noreferrer" class="bg-neo-lime text-black border-[1.5px] border-black px-3.5 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-white transition-all">
+              OPEN TRYHACKME ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="neo-toast" class="font-mono">
+    [COPIED TO CLIPBOARD]
+  </div>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>
