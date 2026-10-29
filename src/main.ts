@@ -225,24 +225,24 @@ class NeobrutalismApp {
 
     titleEl.textContent = p.title;
     bodyEl.innerHTML = `
-      <div class="flex flex-wrap items-center gap-2 mb-2 font-mono">
-        <span class="border-[2px] border-black px-2 py-0.5 font-mono text-xs font-bold bg-neo-lime">${p.category}</span>
-        <span class="border-[2px] border-black px-2 py-0.5 font-mono text-xs font-bold bg-neo-purple text-white">${p.status}</span>
-        <span class="border-[2px] border-black px-2 py-0.5 font-mono text-xs font-bold bg-neo-pink">${p.metric}</span>
+      <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 font-mono">
+        <span class="border-[2px] border-black px-2 py-0.5 font-mono text-[11px] sm:text-xs font-bold bg-neo-lime">${p.category}</span>
+        <span class="border-[2px] border-black px-2 py-0.5 font-mono text-[11px] sm:text-xs font-bold bg-neo-purple text-white">${p.status}</span>
+        <span class="border-[2px] border-black px-2 py-0.5 font-mono text-[11px] sm:text-xs font-bold bg-neo-pink">${p.metric}</span>
       </div>
-      <p class="font-display font-black text-lg">${p.tagline}</p>
+      <p class="font-display font-black text-base sm:text-lg">${p.tagline}</p>
       <p class="font-mono text-xs sm:text-sm text-slate-800 leading-relaxed font-semibold">${p.desc}</p>
       
-      <div class="border-2 border-black p-4 bg-slate-50 shadow-[2px_2px_0px_#000] my-2">
+      <div class="border-2 border-black p-3.5 sm:p-4 bg-slate-50 shadow-[2px_2px_0px_#000] my-2">
         <h4 class="font-display font-black text-xs uppercase mb-2">TECHNICAL ARCHITECTURE HIGHLIGHTS:</h4>
-        <ul class="space-y-1.5 list-disc pl-5 font-mono text-xs">
+        <ul class="space-y-1.5 list-disc pl-4 sm:pl-5 font-mono text-xs text-slate-800">
           ${p.architectureDetails.map(d => `<li>${d}</li>`).join('')}
         </ul>
       </div>
 
-      <div class="flex flex-wrap gap-3 pt-2">
-        ${p.liveUrl ? `<a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="bg-neo-lime text-black border-[2px] border-black px-4 py-2 font-display font-black text-xs uppercase shadow-[2px_2px_0px_#000]">LIVE DEMO ↗</a>` : ''}
-        <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="bg-white text-black border-[2px] border-black px-4 py-2 font-display font-black text-xs uppercase shadow-[2px_2px_0px_#000]">VIEW SOURCE CODE [GITHUB] ↗</a>
+      <div class="flex flex-col xs:flex-row gap-2.5 sm:gap-3 pt-2">
+        ${p.liveUrl ? `<a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="w-full xs:w-auto text-center justify-center bg-neo-lime text-black border-[2px] border-black px-4 py-2 font-display font-black text-xs uppercase shadow-[2px_2px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all">LIVE DEMO ↗</a>` : ''}
+        <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="w-full xs:w-auto text-center justify-center bg-white text-black border-[2px] border-black px-4 py-2 font-display font-black text-xs uppercase shadow-[2px_2px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all">VIEW SOURCE CODE [GITHUB] ↗</a>
       </div>
     `;
     modal.classList.add('active');
@@ -254,21 +254,21 @@ class NeobrutalismApp {
     if (!modal || !bodyEl) return;
 
     bodyEl.innerHTML = `
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-1">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-h-[65vh] overflow-y-auto pr-1">
         ${CERTS_DATA.map(c => `
-          <div class="bg-white border-2 border-black p-4 shadow-[3px_3px_0px_#000] flex flex-col justify-between hover:bg-slate-50 transition-colors">
+          <div class="bg-white border-2 border-black p-3.5 sm:p-4 shadow-[2.5px_2.5px_0px_#000] sm:shadow-[3px_3px_0px_#000] flex flex-col justify-between hover:bg-slate-50 transition-colors">
             <div>
               <div class="flex justify-between items-center mb-1.5">
-                <span class="font-mono text-[11px] font-black uppercase text-neo-purple">${c.tag}</span>
-                <span class="border-[1.5px] border-black px-1.5 py-0.5 font-mono text-[10px] font-bold bg-neo-lime">${c.badge}</span>
+                <span class="font-mono text-[10px] sm:text-[11px] font-black uppercase text-neo-purple">${c.tag}</span>
+                <span class="border-[1.5px] border-black px-1.5 py-0.5 font-mono text-[9px] sm:text-[10px] font-bold bg-neo-lime">${c.badge}</span>
               </div>
-              <h4 class="font-display font-black text-sm uppercase leading-tight mb-1 text-black">${c.title}</h4>
-              <p class="font-mono text-xs text-slate-800 font-bold my-1">${c.detail}</p>
+              <h4 class="font-display font-black text-xs sm:text-sm uppercase leading-tight mb-1 text-black">${c.title}</h4>
+              <p class="font-mono text-[11px] sm:text-xs text-slate-800 font-bold my-1">${c.detail}</p>
               <p class="font-body text-xs text-slate-600 mb-3">${c.desc}</p>
             </div>
-            <div class="pt-2 border-t border-black/10 flex items-center justify-between">
+            <div class="pt-2 border-t border-black/10 flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-2">
               <span class="font-mono text-[10px] font-bold text-slate-500">FORMAT: ${c.fileType}</span>
-              <a href="${c.fileUrl}" target="_blank" rel="noopener noreferrer" class="bg-neo-lime text-black border-2 border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-white active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all flex items-center gap-1">
+              <a href="${c.fileUrl}" target="_blank" rel="noopener noreferrer" class="w-full xs:w-auto text-center justify-center bg-neo-lime text-black border-2 border-black px-3 py-1 font-mono text-xs font-black shadow-[2px_2px_0px_#000] hover:bg-white active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all flex items-center gap-1">
                 VIEW CERTIFICATE ↗
               </a>
             </div>
@@ -298,6 +298,63 @@ class NeobrutalismApp {
   }
 
   private bindEvents() {
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('btn-mobile-menu-toggle');
+    const mobileDrawer = document.getElementById('mobile-nav-drawer');
+    const iconBars = document.getElementById('menu-icon-bars');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    const toggleMobileMenu = () => {
+      if (!mobileDrawer) return;
+      const isOpen = !mobileDrawer.classList.contains('hidden');
+      if (isOpen) {
+        mobileDrawer.classList.add('hidden');
+        iconBars?.classList.remove('hidden');
+        iconClose?.classList.add('hidden');
+      } else {
+        mobileDrawer.classList.remove('hidden');
+        iconBars?.classList.add('hidden');
+        iconClose?.classList.remove('hidden');
+      }
+    };
+
+    mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
+
+    // Auto-close drawer when clicking on any mobile nav link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer?.classList.add('hidden');
+        iconBars?.classList.remove('hidden');
+        iconClose?.classList.add('hidden');
+      });
+    });
+
+    // Touch Swipe Gestures for Projects
+    const projectContainer = document.getElementById('project-card-container');
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    projectContainer?.addEventListener('touchstart', (e: TouchEvent) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    projectContainer?.addEventListener('touchend', (e: TouchEvent) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const touchEndY = e.changedTouches[0].screenY;
+      const dx = touchEndX - touchStartX;
+      const dy = touchEndY - touchStartY;
+
+      // Ensure horizontal swipe intent
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) {
+          this.nextProject(); // Swiped left -> next
+        } else {
+          this.prevProject(); // Swiped right -> prev
+        }
+      }
+    }, { passive: true });
+
     // Project Carousel
     document.getElementById('btn-proj-prev')?.addEventListener('click', () => this.prevProject());
     document.getElementById('btn-proj-next')?.addEventListener('click', () => this.nextProject());
